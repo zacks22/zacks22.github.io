@@ -28,7 +28,7 @@
     color: black;
   }
   
-.topnav a.active {
+.topnav #home {
     font-weight: bold;
     font-family: 'Montserrat' !important ;
 }
