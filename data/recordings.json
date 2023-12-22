@@ -1,0 +1,19 @@
+[
+    { 
+      "category": "World Premieres", 
+      "title":"'Phasing in 4 for Woodwind Quartet",
+      "ukr_title": "Поетапність в 4 для квартету деревʼяних духових",
+      "composer": "Lehki", 
+      "ukr_composer": "Легкий",
+      "year": "2023", 
+      "movements": [
+                 ],
+      "performers": [
+                      "Flute: Rowan Froh (Флейта: Роан Фро)", 
+                      "Oboe: Glenda Lindgren (Гобоя: Ґленда Ліндґен)", 
+                      "Clarinet: Allie Harrington (Кларнета: Аллі Гаррінґтон)", 
+                      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+                  ], 
+      "embedVideoUrl": "https://www.youtube.com/embed/uWZ8FnyJipc?si=S_PFz1j8kIL4Rb4t"
+    }
+  ]
