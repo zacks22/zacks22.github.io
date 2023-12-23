@@ -1,12 +1,25 @@
+// Function to replace hyphens with spaces and uppercase words
+function formatCategoryParam(param) {
+    return param
+        .replace(/-/g, ' ') // Replace hyphens with spaces globally
+        .replace(/(?:^|\s)\S/g, function (a) {
+            return a.toUpperCase();
+        }); // Uppercase the first character of each word
+}
+
 async function generateRecordings() {
-    // Fetch project data from JSON file
+    // Get the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramCategory = urlParams.get('category');
+    const formattedCategory = formatCategoryParam(paramCategory);
+
+    // Fetch project data from JSON file and filter for selected category
     const response = await fetch('../data/recordings.json');
     const allRecordings = await response.json();
+    const recordings = allRecordings.filter(record => record.category === formattedCategory);
 
-    const recordings = allRecordings.filter(record => record.category === "Other Slavic Rep");
-
+    // get recordings container and start generating html
     var recordingsContainer = document.getElementById('recordings-container');
-
     var recordingHtml = `<h2 class="recording-category">`+recordings[0].category+`</h2>`;
 
     // Generate HTML for each recording

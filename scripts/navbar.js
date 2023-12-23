@@ -8,7 +8,7 @@ function generateNavbar() {
     // Define the navigation links
     var navLinks = [
        { id: 'home', text: 'Zachary Senick', href: '/' },
-       { id: 'recordings', text: 'Recordings', href: '/pages/recordings.html' },
+       { id: 'recordings', text: 'Recordings', href: '/pages/recordings.html?category=world-premieres' },
        { id: 'lessons', text: 'Lessons', href: '/pages/lessons.html' },
        { id: 'repertoire', text: 'Repertoire', href: '/assets/repertoire.pdf' },
        { id: 'resume', text: 'Resume', href: '/assets/resume.pdf' },

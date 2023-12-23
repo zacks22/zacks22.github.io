@@ -6,44 +6,46 @@
   font-family: 'Playfair Display';
 }
 
+/* Add this CSS to your existing styles */
 .topnav {
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    font-family: 'Montserrat' !important ;
-    font-size: 1.2em;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  font-family: 'Montserrat' !important;
+  font-size: 1.2em;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 .topnav #home {
-    font-weight: bold;
-    font-family: 'Montserrat' !important ;
+  font-weight: bold;
+  font-family: 'Montserrat' !important;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active:hover {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-  }
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
 
 .hr-nav {
-    height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
+
 
 .portrait {
     border-radius: 10px;
