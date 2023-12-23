@@ -5,12 +5,12 @@ async function generateRecordings() {
 
     var recordingsContainer = document.getElementById('recordings-container');
 
-    var recordingHtml = `<div class="recording-section">
-                            <h2 class="recording-category">`+recordings[0].category+`</h2>`;
+    var recordingHtml = `<h2 class="recording-category">`+recordings[0].category+`</h2>`;
 
     // Generate HTML for each recording
     recordings.forEach(function(recording) {
       recordingHtml += `
+      <div class="recording-section">
           <hr class="recording-hr">
           <h4>
             ${recording.composer}: ${recording.title} (${recording.year}) <br>
