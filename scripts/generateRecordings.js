@@ -8,25 +8,20 @@ function formatCategoryParam(param) {
 }
 
 async function generateRecordings() {
-    console.log('hello');
 
     // Get the URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const paramCategory = urlParams.get('category');
     const formattedCategory = formatCategoryParam(paramCategory);
 
-    console.log(formattedCategory);
-
     // Fetch project data from JSON file and filter for selected category
     const response = await fetch('../data/recordings.json');
     const allRecordings = await response.json();
     const recordings = allRecordings.filter(record => record.category.trim() === formattedCategory);
 
-    console.log(recordings)
-
     // get recordings container and start generating html
     var recordingsContainer = document.getElementById('recordings-container');
-    var recordingHtml = `<h2 class="recording-category">`+recordings[0].category+`</h2>`;
+    var recordingHtml = `<h2 class="recording-category">`+formattedCategory+`</h2>`;
 
     // Generate HTML for each recording
     recordings.forEach(function(recording) {
