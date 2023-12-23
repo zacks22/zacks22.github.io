@@ -346,6 +346,25 @@
       },
       { 
         "category": "Other Slavic Rep", 
+        "title":"Sonata for Bassoon and Piano",
+        "ukr_title": "",
+        "composer": "Swider", 
+        "ukr_composer": "",
+        "year": "",
+        "movements": [
+                        "I: Allegro con spirito",
+                        "II: Andante",
+                        "III: Tempo di menuetto",
+                        "IV: Allegro"
+                   ],
+        "performers": [
+                        "Bassoon: Zachary Senick",
+                        "Piano: Wesley Shen"
+                    ], 
+        "embedVideoUrl": "https://www.youtube.com/embed/9Ti0Uq5lXsI"
+      },
+      { 
+        "category": "Other Slavic Rep", 
         "title":"Elegy for Bassoon and Piano",
         "ukr_title": "",
         "composer": "Papandopulo", 

@@ -1,7 +1,9 @@
 async function generateRecordings() {
     // Fetch project data from JSON file
     const response = await fetch('../data/recordings.json');
-    const recordings = await response.json();
+    const allRecordings = await response.json();
+
+    const recordings = allRecordings.filter(record => record.category === "Other Slavic Rep");
 
     var recordingsContainer = document.getElementById('recordings-container');
 
@@ -13,8 +15,8 @@ async function generateRecordings() {
       <div class="recording-section">
           <hr class="recording-hr">
           <h4>
-            ${recording.composer}: ${recording.title} (${recording.year}) <br>
-            ${recording.ukr_composer}: ${recording.ukr_title} (${recording.year})
+            ${recording.composer}: ${recording.title} ${recording.year === "" ? '' : `(${recording.year})`} <br>
+            ${recording.ukr_composer === "" ? '' : `${recording.ukr_composer}:`} ${recording.ukr_title} ${recording.year === "" ? '' : `(${recording.year})`}
           </h4>
           <p>
             <!-- Movements -->
@@ -30,9 +32,10 @@ async function generateRecordings() {
         <br>
       `;
 
+    });
+
     recordingHtml += '</div>'
 
     // Append the recording HTML to the container
     recordingsContainer.innerHTML = recordingHtml;
-    });
 }
