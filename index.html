@@ -13,21 +13,14 @@
     
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYW5CW1GXG"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-ZYW5CW1GXG'); </script>
     
+    <!-- Local libraries -->
+  <script type="text/javascript" src="./scripts/navbar.js"></script>
+
   </head>
   <body>
 
     <!-- Build the Navigation Bar-->
-
-    <div class="topnav">
-        <a class="active" href="">Zachary Senick</a>
-        <a href="pages/recordings.html">Recordings</a>
-        <a href="pages/lessons.html" >Lessons</a>
-        <a href="assets/repertoire.pdf">Repertoire</a>
-        <a href="assets/resume.pdf">Resume</a>
-        <a href="pages/contact.html">Contact</a>
-    </div>
-
-    <hr class="hr-nav">
+    <div id="navbar-container"></div>
 
     <!-- Create the main About content -->
 
@@ -46,6 +39,7 @@
     </div>
 
 
+    <script type="text/javascript" src="index.js"></script>
 
   </body>
 </html>
