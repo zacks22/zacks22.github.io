@@ -11,12 +11,13 @@
   overflow: hidden;
   background-color: transparent;
   font-family: 'Montserrat' !important;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .topnav a {
   float: left;
   color: #000000;
+  display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -154,7 +155,8 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
