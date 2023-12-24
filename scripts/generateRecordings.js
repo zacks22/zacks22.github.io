@@ -41,17 +41,17 @@ async function generateRecordings() {
             <!-- Performers -->
             ${recording.performers.map(performer => `<br>${performer}`).join('')}
           </p>
+          <!-- Youtube Video iframe -->
           <div class="video-container">
               <iframe src="${recording.embedVideoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <br>
         </div>
         <br>
+      </div>
       `;
 
     });
-
-    recordingHtml += '</div>'
 
     // Append the recording HTML to the container
     recordingsContainer.innerHTML = recordingHtml;
