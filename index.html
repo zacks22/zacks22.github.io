@@ -13,17 +13,23 @@
     
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYW5CW1GXG"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-ZYW5CW1GXG'); </script>
     
+    <!-- External Libaries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <!-- Local libraries -->
-  <script type="text/javascript" src="./scripts/navbar.js"></script>
+    <script type="text/javascript" src="./scripts/navbar.js"></script>
 
   </head>
   <body>
 
     <!-- Build the Navigation Bar-->
-    <div id="navbar-container"></div>
+    <!--<div id="navbar-container"></div>-->
+
+    <header>
+      <div id="navbar-container"></div>
+    </header>
 
     <!-- Create the main About content -->
-
 
     <div class="about-grid">
         <img class="portrait" src="img/Headshot_1.JPG" alt="Zachary Senick">
@@ -40,6 +46,10 @@
 
 
     <script type="text/javascript" src="index.js"></script>
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   </body>
 </html>

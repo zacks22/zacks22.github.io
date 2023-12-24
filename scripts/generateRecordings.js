@@ -21,7 +21,8 @@ async function generateRecordings() {
 
     // get recordings container and start generating html
     var recordingsContainer = document.getElementById('recordings-container');
-    var recordingHtml = `<h2 class="recording-category">`+formattedCategory+`</h2>`;
+
+    recordingHtml = ``;
 
     // Generate HTML for each recording
     recordings.forEach(function(recording) {

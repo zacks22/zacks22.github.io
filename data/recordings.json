@@ -129,6 +129,25 @@
       },
       { 
         "category": "Ukrainian Solo Rep", 
+        "title":"Carpathian Sketches for Solo Bassoon",
+        "ukr_title": "Карпатські замальовки для фагота соло",
+        "composer": "Kyryliv", 
+        "ukr_composer": "Кирилів",
+        "year": "2021", 
+        "movements": [
+                      "I: Carpathians is calling you (Карпати викликають Вам)",
+                      "II: Morning in the mountains (Ранок у горах)",
+                      "III: Life of a wild forest (Життя дикого лісу)",
+                      "IV: Interesting Hutsulian village (Цікаве гуцульське село)",
+                      "V: Dance with a beautiful Mavka (Танець з красивою мавкою)"
+                   ],
+        "performers": [
+                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+                    ], 
+        "embedVideoUrl": "https://www.youtube.com/embed/fZwxybCXOoE?si=hpnS-lO8Y4i_KmAd"
+      },
+      { 
+        "category": "Ukrainian Solo Rep", 
         "title":"Window for Bassoon and Harpsichord",
         "ukr_title": "Вікна для фагота та клавесин",
         "composer": "Denysenko", 
@@ -325,6 +344,24 @@
                         "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
                     ], 
         "embedVideoUrl": "https://www.youtube.com/embed/kbzFaOFD91E"
+      },
+      { 
+        "category": "Ukrainian Chamber Rep", 
+        "title":"Sonata for Bassoon and Piano, op. 70",
+        "ukr_title": "Соната для фагота та фортепіано тв. 70",
+        "composer": "Levitin", 
+        "ukr_composer": "Левитин",
+        "year": "1969",
+        "movements": [
+                        "I: Allegro non troppo (Алегро нон тропо)",
+                        "II: Andante (Анданте)",
+                        "III: Allegretto (Алегрето)"
+                   ],
+        "performers": [
+                          "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                          "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                    ], 
+        "embedVideoUrl": "https://www.youtube.com/embed/FqQlyxUdqNQ?si=tXJVXgtozXn1z16u"
       },
       { 
         "category": "Other Slavic Rep", 
