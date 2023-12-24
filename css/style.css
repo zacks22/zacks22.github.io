@@ -137,6 +137,13 @@
 }
 
 
+iframe { 
+  width: 70%;
+  aspect-ratio: 16 / 9;
+}
+
+
+
 @media screen and (max-width: 600px) {
 
   .about-grid {
@@ -148,5 +155,6 @@
     grid-column: auto;
     grid-row: auto;
   }
+
 
 }
