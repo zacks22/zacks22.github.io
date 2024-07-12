@@ -1,5 +1,95 @@
 [
-    { 
+  { 
+    "category": "World Premieres", 
+    "title":"Naiad for Bassoon and Piano",
+    "ukr_title": "Наяда для фагота та фортепіано",
+    "composer": "Demchenko", 
+    "ukr_composer": "Демченко",
+    "year": "2024", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/BRrHtsnJrR4?si=Tjuqc3y2xoQH4ZNT"
+  },
+  { 
+    "category": "World Premieres", 
+    "title":"Three Pieces in F for Bassoon and Piano",
+    "ukr_title": "Три пʼєси в ф для фагота та",
+    "composer": "Sokachyk", 
+    "ukr_composer": "Сокачик",
+    "year": "2024", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/S5Ek0roIrnk?si=rm9pdYX3a0_Sd5VE"
+  },
+  { 
+    "category": "Ukrainian Solo Rep", 
+    "title":"Concerto for Bassoon",
+    "ukr_title": "Концерт для фагота",
+    "composer": "Potiyenko", 
+    "ukr_composer": "Потієнко",
+    "year": "1994", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/iqaSdou_6Tw?si=aWU6URzTcCbMJovt"
+  },
+  { 
+    "category": "Ukrainian Solo Rep", 
+    "title":"Variations on a theme by Shostakovich for Bassoon",
+    "ukr_title": "Варіації на тему Шостаковича",
+    "composer": "Komlikova", 
+    "ukr_composer": "Комлікова",
+    "year": "2005", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/sXjFOyFCdnM?si=qMr-ZljH0wi-y2Eo"
+  },
+  { 
+    "category": "Ukrainian Solo Rep", 
+    "title":"Sonata for Bassoon and Piano",
+    "ukr_title": "Соната для фагота та фортепіано",
+    "composer": "Ishchenko", 
+    "ukr_composer": "Іщенко",
+    "year": "1985", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/BFR-iQYz1x4?si=FTyqDgz4edPUGmca"
+  },
+  { 
+    "category": "Ukrainian Solo Rep", 
+    "title":"Concerto for Bassoon",
+    "ukr_title": "Концерт для фагота",
+    "composer": "Homolyaka", 
+    "ukr_composer": "Гомоляка",
+    "year": "1976", 
+    "movements": [
+               ],
+    "performers": [
+                    "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
+                    "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
+                ], 
+    "embedVideoUrl": "https://www.youtube.com/embed/YYZHAOuaIUs?si=wIrJ8xOznpoAGqGn"
+  },  
+  { 
       "category": "World Premieres", 
       "title":"Phasing in 4 for Woodwind Quartet",
       "ukr_title": "Поетапність в 4 для квартету деревʼяних духових",
@@ -523,95 +613,5 @@
                         "Piano: Wesley Shen"
                     ], 
         "embedVideoUrl": "https://www.youtube.com/embed/-ztUG-WSo68"
-      },
-      { 
-        "category": "World Premieres", 
-        "title":"Naiad for Bassoon and Piano",
-        "ukr_title": "Наяда для фагота та фортепіано",
-        "composer": "Demchenko", 
-        "ukr_composer": "Демченко",
-        "year": "2024", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/BRrHtsnJrR4?si=Tjuqc3y2xoQH4ZNT"
-      },
-      { 
-        "category": "World Premieres", 
-        "title":"Three Pieces in F for Bassoon and Piano",
-        "ukr_title": "Три пʼєси в ф для фагота та",
-        "composer": "Sokachyk", 
-        "ukr_composer": "Сокачик",
-        "year": "2024", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/S5Ek0roIrnk?si=rm9pdYX3a0_Sd5VE"
-      },
-      { 
-        "category": "Ukrainian Solo Rep", 
-        "title":"Concerto for Bassoon",
-        "ukr_title": "Концерт для фагота",
-        "composer": "Potiyenko", 
-        "ukr_composer": "Потієнко",
-        "year": "1994", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/iqaSdou_6Tw?si=aWU6URzTcCbMJovt"
-      },
-      { 
-        "category": "Ukrainian Solo Rep", 
-        "title":"Variations on a theme by Shostakovich for Bassoon",
-        "ukr_title": "Варіації на тему Шостаковича",
-        "composer": "Komlikova", 
-        "ukr_composer": "Комлікова",
-        "year": "2005", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/sXjFOyFCdnM?si=qMr-ZljH0wi-y2Eo"
-      },
-      { 
-        "category": "Ukrainian Solo Rep", 
-        "title":"Sonata for Bassoon and Piano",
-        "ukr_title": "Соната для фагота та фортепіано",
-        "composer": "Ishchenko", 
-        "ukr_composer": "Іщенко",
-        "year": "1985", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/BFR-iQYz1x4?si=FTyqDgz4edPUGmca"
-      },
-      { 
-        "category": "Ukrainian Solo Rep", 
-        "title":"Concerto for Bassoon",
-        "ukr_title": "Концерт для фагота",
-        "composer": "Homolyaka", 
-        "ukr_composer": "Гомоляка",
-        "year": "1976", 
-        "movements": [
-                   ],
-        "performers": [
-                        "Bassoon: Zachary Senick (Фагота: Захар Сенюк)",
-                        "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
-                    ], 
-        "embedVideoUrl": "https://www.youtube.com/embed/YYZHAOuaIUs?si=wIrJ8xOznpoAGqGn"
       }
   ]
