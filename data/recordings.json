@@ -1,6 +1,137 @@
 [
   {
     "category": "World Premieres",
+    "title": "Ballada Ukrainian Pattern Bassoon & Piano",
+    "ukr_title": "Балада український візерунок для фагота",
+    "composer": "Chernenko",
+    "ukr_composer": "Черненко",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Piano: Catherine Bringerud (Фп: Катерин Врінгеруд)",
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/4zmZf6g2eD4?si=iAnLGEYFatIrTvW5"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Darkness for solo bassoon",
+    "ukr_title": "Темрява для фагота соло",
+    "composer": "Bekirov",
+    "ukr_composer": "Бекіров",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/unfbq6rvRn0?si=z5qRbOag69AjEdBy"
+  },
+  {
+    "category": "World Premieres",
+    "title": "A-ff-air for solo bassoon",
+    "ukr_title": "A-ff-air для фагота соло",
+    "composer": "Sysenko",
+    "ukr_composer": "Сисенко",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/J25UN1eUbEM?si=aj34w1VN9s4UuJEd"
+  },
+  {
+    "category": "World Premieres",
+    "title": "The New Life for solo bassoon",
+    "ukr_title": "Нове життя для фагота",
+    "composer": "Stoianova",
+    "ukr_composer": "Стоянова",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/fDfHoEhx5JQ?si=HoDATWtBcrPwkoDE"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Monologue for solo bassoon",
+    "ukr_title": "Монолог для фагота соло",
+    "composer": "Lys",
+    "ukr_composer": "Лис",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/l-tC5Hr-z98?si=qHqFyChezd_I6j0S"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Etude for solo bassoon",
+    "ukr_title": "Етюд для фагота соло",
+    "composer": "Kostiv",
+    "ukr_composer": "Костів",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/bGNudGxVG-o?si=ZMOqVPmihdN8841I"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Improvisation 1 for solo bassoon",
+    "ukr_title": "перша імпровізація для фагота соло",
+    "composer": "Ozerskyi",
+    "ukr_composer": "Озерський",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/JrJCEQvbJeQ?si=N3PYPztL8bH_qbK-"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Rondo for solo bassoon",
+    "ukr_title": "Рондо для фагота соло",
+    "composer": "Arkhypova",
+    "ukr_composer": "Архипова",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/12XBbRFRkNg?si=3QrajcesKG1Uf_xe"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Mélodie for solo bassoon",
+    "ukr_title": "Мелодія для фагота соло",
+    "composer": "Lomov",
+    "ukr_composer": "Ломов",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/lSJUOb-I3Ww?si=KVLwvLh6oISbM8Rq"
+  },
+  {
+    "category": "World Premieres",
+    "title": "Impromptu for solo bassoon",
+    "ukr_title": "Експромт для фагота соло",
+    "composer": "Chernenko",
+    "ukr_composer": "Черненко",
+    "year": "2024",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/y-ZedEvlbaI?si=HIBtdzd1GZP3Bbkr"
+  },
+  {
+    "category": "World Premieres",
     "title": "Corona Australis",
     "ukr_title": "Австралійська корона",
     "composer": "Demchenko",
@@ -140,6 +271,46 @@
       "Piano: Wesley Shen (Фортепіано: Веслий Шен)"
     ],
     "embedVideoUrl": "https://www.youtube.com/embed/iqaSdou_6Tw?si=aWU6URzTcCbMJovt"
+  },
+  {
+    "category": "Ukrainian Solo Rep",
+    "title": "Melody for Bassoon and Piano",
+    "ukr_title": "Мелодія для фагота та фортепіано",
+    "composer": "Jacobchuk",
+    "ukr_composer": "Яковчук",
+    "year": "1978",
+    "movements": [],
+    "performers": [
+      "Piano: Catherine Bringerud (Фп: Катерин Врінгеруд)",
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/YHWGcMMqEDE?si=izzC99LaezbVb53z"
+  },
+  {
+    "category": "Ukrainian Solo Rep",
+    "title": "Impromptu for solo bassoon",
+    "ukr_title": "Експромт для фагота соло",
+    "composer": "Chernenko",
+    "ukr_composer": "Черненко",
+    "year": "1994",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/y-ZedEvlbaI?si=AVOfOxPYwCruGcrA"
+  },
+  {
+    "category": "Ukrainian Solo Rep",
+    "title": "Ironic Moment for solo bassoon",
+    "ukr_title": "Іронічний момент для фагота соло",
+    "composer": "Antonyuk",
+    "ukr_composer": "Антонюк",
+    "year": "2014",
+    "movements": [],
+    "performers": [
+      "Bassoon: Zachary Senick (Фагота: Захар Сенюк)"
+    ],
+    "embedVideoUrl": "https://www.youtube.com/embed/lYqXBddSLIQ?si=SJ5-B9Oprjrke07N"
   },
   {
     "category": "Ukrainian Solo Rep",
