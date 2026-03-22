@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   font-family: 'Playfair Display';
 }
+
+body {
+  background-color: #faf8f5;
+  color: #2a2420;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────── */
 
 #navbar-container {
   position: sticky;
@@ -12,7 +20,6 @@
   background-color: #faf8f5;
 }
 
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
   background-color: #faf8f5;
   font-family: 'Montserrat' !important;
@@ -43,12 +50,26 @@
   font-family: 'Montserrat' !important;
 }
 
+@media screen and (min-width: 992px) {
+  .custom-navbar a {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-navbar a {
+    padding: 16px 20px;
+  }
+}
+
 .hr-nav {
   height: 3px;
   border: 0;
   background: #8b6635;
   margin: 0;
 }
+
+/* ─── Portrait ───────────────────────────────────────────── */
 
 .portrait {
   border-radius: 0;
@@ -57,7 +78,10 @@
   height: auto;
   margin: 1em auto;
   display: block;
+  margin: 1em 0;
 }
+
+/* ─── Grid layout ────────────────────────────────────────── */
 
 .about-item1 {
   grid-area: portrait;
@@ -70,9 +94,8 @@
 
 .about-grid {
   display: grid;
-  /*grid-template-areas: 'portrait text';*/
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 2.5rem;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   padding: 2em 1.5em 3em;
   max-width: 1100px;
@@ -80,11 +103,19 @@
   margin-right: auto;
 }
 
-.about-title {
-  font-weight: bold;
-  font-size: 2.0em;
-  display: block;
-  margin-bottom: 0.25em;
+.about-grid > * {
+  min-width: 0;
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+
+h1.about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }
 
 h2 {
@@ -92,7 +123,7 @@ h2 {
   font-size: 2.0rem;
   font-weight: 400;
   letter-spacing: 0.03em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 
 body {
@@ -111,9 +142,24 @@ body {
   line-height: 1.8;
 }
 
+.text a,
+.text a:visited {
+  color: #8b6635;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(139, 102, 53, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.text a:hover {
+  color: #6e4f28;
+  text-decoration-color: rgba(110, 79, 40, 0.8);
+}
+
+/* ─── Recordings ─────────────────────────────────────────── */
 
 .recording-section {
-  padding-left: 0.5em;
+  padding: 0 1em;
   text-align: center;
 }
 
@@ -133,8 +179,8 @@ body {
 
 .recording-category {
   text-align: center;
-  width: 60%;
-  margin: auto;
+  width: min(60%, 340px);
+  margin: 2em auto;
 }
 
 .recording-category select {
@@ -175,13 +221,37 @@ body {
   background-color: #f2ede6;
 }
 
+/* ─── Video ──────────────────────────────────────────────── */
 
-iframe {
-  width: 70%;
-  aspect-ratio: 16 / 9;
+.video-container {
+  width: 90%;
+  margin: 0 auto;
 }
 
+iframe {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+}
 
+/* ─── Contact CTA ────────────────────────────────────────── */
+
+.contact-link {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 32px;
+  border: 1px solid #8b6635;
+  color: #8b6635;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-top: 0.5em;
+}
 
 .text a,
 .text a:visited {
@@ -197,18 +267,16 @@ iframe {
   text-decoration-color: rgba(110, 79, 40, 0.8);
 }
 
-@media screen and (max-width: 600px) {
+/* ─── Responsive ─────────────────────────────────────────── */
 
+@media screen and (max-width: 700px) {
   .about-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
+    padding: 1.5em 1em 2em;
   }
 
-  .about-item1,
-  .about-item2 {
-    grid-column: auto;
-    grid-row: auto;
+  h1.about-title {
+    font-size: 1.8rem;
   }
-
-
 }
