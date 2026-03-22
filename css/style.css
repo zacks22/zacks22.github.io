@@ -9,13 +9,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #1a1714;
+  background-color: #faf8f5;
 }
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
-  overflow: hidden;
-  background-color: #1a1714;
+  background-color: #faf8f5;
   font-family: 'Montserrat' !important;
   font-size: 0.875rem;
   letter-spacing: 0.08em;
@@ -24,7 +23,7 @@
 
 .custom-navbar a {
   float: left;
-  color: #e8e0d4;
+  color: #2a2420;
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -42,7 +41,6 @@
 .custom-navbar #home {
   font-weight: bold;
   font-family: 'Montserrat' !important;
-  font-style: italic;
 }
 
 .hr-nav {
