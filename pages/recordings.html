@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Recordings | Zachary Senick</title>
-    <link rel="stylesheet" href="../css/style.css">
-
-    <!-- External Libaries -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Local libraries -->
-    <script type="text/javascript" src="../scripts/navbar.js"></script>
-    <script type="text/javascript" src="../scripts/generateRecordings.js"></script>
-  </head>
-  <body>
-
-    <header>
-      <div id="navbar-container"></div>
-    </header>
+---
+layout: default
+title: "Recordings | Zachary Senick"
+body_scripts:
+  - /scripts/generateRecordings.js
+  - /pages/recordings.js
+---
 
     <div class="recordings-header">
       <h2>Recordings</h2>
@@ -46,18 +30,3 @@
 
     <!-- Create the main Recording content -->
     <div id="recordings-container"></div>
-
-    <footer>
-      <p class="footer-name">Zachary Senick</p>
-      <p class="footer-meta">
-        <a href="mailto:zachary.senick@mail.utoronto.ca">zachary.senick@mail.utoronto.ca</a>
-        <span class="footer-sep">·</span>
-        © 2026 Zachary Senick
-      </p>
-    </footer>
-
-    <!-- Local Script -->
-    <script type="text/javascript" src="recordings.js"></script>
-
-  </body>
-</html>

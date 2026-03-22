@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% if page.title %}{{ page.title }}{% else %}Zachary Senick{% endif %}</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYW5CW1GXG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYW5CW1GXG');</script>
+
+  {% for script in page.head_scripts %}
+  <script defer src="{{ script }}"></script>
+  {% endfor %}
+</head>
+<body>
+
+  <header>
+    <div id="navbar-container">
+      <nav class="custom-navbar">
+        <a href="/" id="home">Zachary Senick</a>
+        <button class="navbar-toggler" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span>&#9776;</span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a class="nav-link {% if page.url contains 'recordings' %}active{% endif %}" href="/pages/recordings.html">Recordings</a></li>
+          <li><a class="nav-link {% if page.url contains 'lessons' %}active{% endif %}" href="/pages/lessons.html">Lessons</a></li>
+          <li><a class="nav-link" href="/assets/repertoire.pdf">Repertoire</a></li>
+          <li><a class="nav-link" href="/assets/resume.pdf">Resume</a></li>
+          <li><a class="nav-link {% if page.url contains 'contact' %}active{% endif %}" href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <hr class="hr-nav">
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <p class="footer-name">Zachary Senick</p>
+    <p class="footer-meta">
+      <a href="mailto:zachary.senick@mail.utoronto.ca">zachary.senick@mail.utoronto.ca</a>
+      <span class="footer-sep">·</span>
+      © 2026 Zachary Senick
+    </p>
+  </footer>
+
+  {% for script in page.body_scripts %}
+  <script defer src="{{ script }}"></script>
+  {% endfor %}
+
+  <script>
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+      this.setAttribute('aria-expanded', menu.classList.contains('show'));
+    });
+  </script>
+
+</body>
+</html>
