@@ -12,7 +12,7 @@ function generateNavbar() {
     ];
 
     var navbarHtml = `
-        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
             <a class="navbar-brand" id="home" href="${fixedLocation}">Zachary Senick</a>
             <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
