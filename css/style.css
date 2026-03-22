@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-*, *::before, *::after {
-  box-sizing: border-box;
+* {
   font-family: 'Playfair Display';
 }
 
@@ -15,6 +14,7 @@
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
+  overflow: hidden;
   background-color: #ffffff;
   font-family: 'Montserrat' !important;
   font-size: 0.875rem;
@@ -23,6 +23,7 @@
 }
 
 .custom-navbar a {
+  float: left;
   color: #000000;
   display: block;
   text-align: center;
@@ -41,19 +42,6 @@
 .custom-navbar #home {
   font-weight: bold;
   font-family: 'Montserrat' !important;
-}
-
-/* Scope float layout to desktop only — on mobile Bootstrap collapse needs block stacking */
-@media screen and (min-width: 992px) {
-  .custom-navbar a {
-    float: left;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .custom-navbar a {
-    padding: 16px 20px;
-  }
 }
 
 .hr-nav {
@@ -82,6 +70,7 @@
 
 .about-grid {
   display: grid;
+  /*grid-template-areas: 'portrait text';*/
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-template-rows: auto;
@@ -89,10 +78,6 @@
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.about-grid > * {
-  min-width: 0;
 }
 
 .about-title {
@@ -124,22 +109,9 @@ body {
   line-height: 1.8;
 }
 
-.text a,
-.text a:visited {
-  color: #1a1a1a;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(0, 0, 0, 0.35);
-  transition: text-decoration-color 0.2s ease;
-}
-
-.text a:hover {
-  color: #000000;
-  text-decoration-color: rgba(0, 0, 0, 0.85);
-}
 
 .recording-section {
-  padding: 0 1em;
+  padding-left: 0.5em;
   text-align: center;
 }
 
@@ -159,9 +131,8 @@ body {
 
 .recording-category {
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  margin: 1em auto;
+  width: 60%;
+  margin: auto;
 }
 
 .recording-category select {
@@ -195,37 +166,47 @@ body {
   font-size: 16px;
   background-color: #fff;
   color: #333;
+  text-align: center;
 }
 
 .recording-category option:hover {
   background-color: #f0f0f0;
 }
 
-.video-container {
-  width: 90%;
-  margin: 0 auto;
-}
 
 iframe {
-  width: 100%;
-  max-width: 640px;
+  width: 70%;
   aspect-ratio: 16 / 9;
-  height: auto;
-  display: block;
-  margin: 1.5em auto;
 }
 
+
+
+.text a,
+.text a:visited {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 0, 0, 0.35);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.text a:hover {
+  color: #000000;
+  text-decoration-color: rgba(0, 0, 0, 0.85);
+}
 
 @media screen and (max-width: 600px) {
 
   .about-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 1.5em 1em 2em;
+    grid-template-rows: 1fr;
   }
 
-  .about-title {
-    font-size: 1.4em;
+  .about-item1,
+  .about-item2 {
+    grid-column: auto;
+    grid-row: auto;
   }
+
 
 }
