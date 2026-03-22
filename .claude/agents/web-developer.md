@@ -23,7 +23,12 @@ You are the web developer for Zachary Senick's personal musician website (zacks2
 
 ## Recordings page
 - All categories rendered at page load in `data-category` wrapper divs. Filter works by toggling `display` — no `window.location` navigation. This was a deliberate performance fix.
-- `scripts/generateRecordings.js` handles rendering and `showCategory()` toggling.
+- `scripts/generateRecordings.js` handles rendering, category toggling, and composer filtering.
+- **Card layout:** each recording renders as `.recording-card` inside `.recordings-grid` (2-column CSS grid). Cards use `display: flex; flex-direction: column` so card body stretches to fill height. Iframe is flush above card body (no padding wrapper around iframe).
+- **Composer filter:** `data-composer` attribute on each card (slugified lowercase composer name). `window._recordingsGrouped` stores the parsed JSON grouped by category slug — used by `populateComposerFilter()` to rebuild the composer dropdown on each category switch. `showComposer()` toggles card `display` by matching `card.dataset.composer`. Composer select resets to "all" on every category change.
+- **Recordings page heading:** wrapped in `.recordings-header` div (plain `max-width: 1200px` container), NOT `.about-grid` — using `about-grid` as the heading wrapper broke card layout by injecting `grid-template-areas` constraints.
+- The select dropdowns use `appearance: none` to remove native browser chrome, with an inline SVG chevron as `background-image`. `pages/recordings.js` attaches jQuery `.change()` listeners for both `#selectCategory` and `#selectComposer`.
+- **Lessons info block:** `.lessons-info > div` uses `display: flex; gap: 1em`. `.lessons-label` uses `flex: 0 0 6.5rem` — this is required. `inline-block` with `width` was tried and failed because wrapped value text bled under the label.
 
 ## jQuery / Bootstrap
 - Use jQuery 3.6.4 only. The old `jquery-1.12.4` was removed — do not reintroduce it.
