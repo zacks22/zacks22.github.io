@@ -45,6 +45,10 @@ body {
   color: #8b6635;
 }
 
+.custom-navbar .nav-link.active {
+  color: #8b6635 !important;
+}
+
 .custom-navbar #home {
   font-weight: bold;
   font-family: 'Montserrat' !important;
@@ -163,6 +167,27 @@ h2::after {
 .text a:hover {
   color: #6e4f28;
   text-decoration-color: rgba(110, 79, 40, 0.8);
+}
+
+/* ─── Lessons info block ─────────────────────────────────── */
+
+.lessons-info {
+  background: #f2ede6;
+  border-left: 3px solid #8b6635;
+  padding: 1em 1.25em;
+  margin: 1.25em 0;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.lessons-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b6635;
+  display: inline-block;
+  width: 7em;
 }
 
 /* ─── Recordings ─────────────────────────────────────────── */
