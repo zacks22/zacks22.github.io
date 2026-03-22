@@ -6,12 +6,22 @@
   font-family: 'Playfair Display';
 }
 
+#navbar-container {
+  min-height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
   overflow: hidden;
-  background-color: transparent;
+  background-color: #ffffff;
   font-family: 'Montserrat' !important;
   font-size: 1.2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .custom-navbar a {
