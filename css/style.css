@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   font-family: 'Playfair Display';
 }
+
+body {
+  background-color: #faf8f5;
+  color: #2a2420;
+  padding-top: 3rem;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────── */
 
 #navbar-container {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #faf8f5;
 }
 
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
-  overflow: hidden;
-  background-color: #ffffff;
+  background-color: #faf8f5;
   font-family: 'Montserrat' !important;
   font-size: 0.875rem;
   letter-spacing: 0.08em;
@@ -24,7 +31,7 @@
 
 .custom-navbar a {
   float: left;
-  color: #000000;
+  color: #2a2420;
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -36,7 +43,7 @@
 
 .custom-navbar a:hover {
   background-color: transparent;
-  color: #555555;
+  color: #8b6635;
 }
 
 .custom-navbar #home {
@@ -44,20 +51,37 @@
   font-family: 'Montserrat' !important;
 }
 
-.hr-nav {
-  height: 4px;
-  border: 0;
-  box-shadow: inset 0 6px 8px -6px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 992px) {
+  .custom-navbar a {
+    float: left;
+  }
 }
 
+@media screen and (max-width: 992px) {
+  .custom-navbar a {
+    padding: 16px 20px;
+  }
+}
+
+.hr-nav {
+  height: 3px;
+  border: 0;
+  background: #8b6635;
+  margin: 0;
+}
+
+/* ─── Portrait ───────────────────────────────────────────── */
+
 .portrait {
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  max-width: 70%;
+  border-radius: 0;
+  border: 3px solid #8b6635;
+  max-width: 100%;
   height: auto;
   margin: 1em auto;
   display: block;
 }
+
+/* ─── Grid layout ────────────────────────────────────────── */
 
 .about-item1 {
   grid-area: portrait;
@@ -70,9 +94,8 @@
 
 .about-grid {
   display: grid;
-  /*grid-template-areas: 'portrait text';*/
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 2.5rem;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   padding: 2em 1.5em 3em;
   max-width: 1100px;
@@ -80,11 +103,19 @@
   margin-right: auto;
 }
 
-.about-title {
-  font-weight: bold;
-  font-size: 2.0em;
-  display: block;
-  margin-bottom: 0.25em;
+.about-grid > * {
+  min-width: 0;
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+
+h1.about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }
 
 h2 {
@@ -92,11 +123,17 @@ h2 {
   font-size: 2.0rem;
   font-weight: 400;
   letter-spacing: 0.03em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 
-body {
-  padding-top: 1.5rem;
+h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #8b6635;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 .text p {
@@ -109,9 +146,24 @@ body {
   line-height: 1.8;
 }
 
+.text a,
+.text a:visited {
+  color: #8b6635;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(139, 102, 53, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.text a:hover {
+  color: #6e4f28;
+  text-decoration-color: rgba(110, 79, 40, 0.8);
+}
+
+/* ─── Recordings ─────────────────────────────────────────── */
 
 .recording-section {
-  padding-left: 0.5em;
+  padding: 0 1em;
   text-align: center;
 }
 
@@ -119,20 +171,20 @@ body {
   width: 80%;
   border: 0;
   height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  background: #8b6635;
+  background-image: linear-gradient(to right, transparent, #8b6635, transparent);
 }
 
 .about-hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, transparent, #8b6635, transparent);
 }
 
 .recording-category {
   text-align: center;
-  width: 60%;
-  margin: auto;
+  width: min(60%, 340px);
+  margin: 2em auto;
 }
 
 .recording-category select {
@@ -144,69 +196,88 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 10px 14px;
-  border: 1px solid #bbb;
+  border: 1px solid #8b6635;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #faf8f5;
+  color: #2a2420;
   cursor: pointer;
   outline: none;
   width: 100%;
 }
 
 .recording-category select:hover {
-  border-color: #aaa;
+  border-color: #6e4f28;
 }
 
 .recording-category select:focus {
-  border-color: #999;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  border-color: #8b6635;
+  box-shadow: 0 0 4px rgba(139, 102, 53, 0.3);
 }
 
 .recording-category option {
   padding: 10px;
   font-size: 16px;
-  background-color: #fff;
-  color: #333;
-  text-align: center;
+  background-color: #faf8f5;
+  color: #2a2420;
 }
 
 .recording-category option:hover {
-  background-color: #f0f0f0;
+  background-color: #f2ede6;
 }
 
+/* ─── Video ──────────────────────────────────────────────── */
+
+.video-container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 iframe {
-  width: 70%;
+  width: 100%;
+  max-width: 640px;
   aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
 }
 
+/* ─── Contact CTA ────────────────────────────────────────── */
 
-
-.text a,
-.text a:visited {
-  color: #1a1a1a;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(0, 0, 0, 0.35);
-  transition: text-decoration-color 0.2s ease;
+.contact-link {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 32px;
+  border: 1px solid #8b6635;
+  color: #8b6635;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-top: 0.5em;
 }
 
-.text a:hover {
-  color: #000000;
-  text-decoration-color: rgba(0, 0, 0, 0.85);
+.contact-link:hover,
+.contact-link:visited:hover {
+  background: #8b6635;
+  color: #faf8f5;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 600px) {
+.contact-link:visited {
+  color: #8b6635;
+}
 
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media screen and (max-width: 700px) {
   .about-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
+    padding: 1.5em 1em 2em;
   }
 
-  .about-item1,
-  .about-item2 {
-    grid-column: auto;
-    grid-row: auto;
+  h1.about-title {
+    font-size: 1.8rem;
   }
-
-
 }
