@@ -1,10 +1,7 @@
 function generateNavbar() {
-    // Get the current page URL
     var currentPage = window.location.pathname;
- 
     fixedLocation = window.location.origin;
- 
-    // Define the navigation links
+
     var navLinks = [
         { id: 'home', text: 'Zachary Senick', href: '/' },
         { id: 'recordings', text: 'Recordings', href: '/pages/recordings.html?category=world-premieres' },
@@ -13,36 +10,38 @@ function generateNavbar() {
         { id: 'resume', text: 'Resume', href: '/assets/resume.pdf' },
         { id: 'contact', text: 'Contact', href: '/pages/contact.html' },
     ];
- 
-    // Create the navbar HTML
+
     var navbarHtml = `
-         <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-               <a class="navbar-brand" id="home" href="${fixedLocation}">Zachary Senick</a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                   <ul class="navbar-nav">
-       `;
- 
-    // Create the buttons using navLinks
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+            <a class="navbar-brand" id="home" href="${fixedLocation}">Zachary Senick</a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+    `;
+
     navLinks.slice(1).forEach(function(link) {
         navbarHtml += `
-             <li class="nav-item">
-                 <a class="nav-link ${currentPage === link.href ? 'active' : ''}" href="${fixedLocation}${link.href}">${link.text}</a>
-             </li>
+            <li class="nav-item">
+                <a class="nav-link ${currentPage === link.href ? 'active' : ''}" href="${fixedLocation}${link.href}">${link.text}</a>
+            </li>
         `;
     });
- 
-    // Close the navbar HTML
+
     navbarHtml += `
-                 </ul>
-             </div>
-         </nav>
-         <hr class="hr-nav">
+                </ul>
+            </div>
+        </nav>
+        <hr class="hr-nav">
     `;
- 
-    // Set the generated navbar in the container
+
     document.getElementById('navbar-container').innerHTML = navbarHtml;
- }
- 
+
+    // Manual toggle — Bootstrap JS may not be ready when generateNavbar() fires on DOMContentLoaded
+    document.querySelector('#navbar-container .navbar-toggler').addEventListener('click', function() {
+        var navCollapse = document.getElementById('navbarNav');
+        navCollapse.classList.toggle('show');
+        this.setAttribute('aria-expanded', navCollapse.classList.contains('show'));
+    });
+}
