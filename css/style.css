@@ -5,10 +5,17 @@
   font-family: 'Playfair Display';
 }
 
+#navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .custom-navbar {
   overflow: hidden;
-  background-color: transparent;
+  background-color: #ffffff;
   font-family: 'Montserrat' !important;
   font-size: 0.875rem;
   letter-spacing: 0.08em;

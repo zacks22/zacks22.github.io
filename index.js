@@ -1,3 +1,3 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     generateNavbar();
-}
+});
