@@ -22,9 +22,10 @@ function generateNavbar() {
     `;
 
     navLinks.slice(1).forEach(function(link) {
+        var linkPath = link.href.split('?')[0];
         navbarHtml += `
             <li class="nav-item">
-                <a class="nav-link ${currentPage === link.href ? 'active' : ''}" href="${fixedLocation}${link.href}">${link.text}</a>
+                <a class="nav-link ${currentPage === linkPath ? 'active' : ''}" href="${fixedLocation}${link.href}">${link.text}</a>
             </li>
         `;
     });
