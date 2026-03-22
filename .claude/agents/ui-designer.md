@@ -23,11 +23,14 @@ You are the UI designer for Zachary Senick's personal musician website (zacks22.
 - **h2:** Playfair Display 400, 2rem, with a 48px × 2px gold rule below via `::after`
 - **h1.about-title:** Playfair Display 700 italic, 2.4rem
 - **CTA buttons:** `.contact-link` class — Montserrat uppercase, gold outline, fills gold on hover. Multiple buttons use `.cta-group` flex container.
-- **Lessons info block:** `.lessons-info` — `background: #f2ede6`, `border-left: 3px solid #8b6635`, `padding: 1em 1.25em`. Labels use `.lessons-label`: Montserrat 0.75rem uppercase, gold, `width: 7em` for alignment.
-- **Mobile breakpoint:** 700px — grid collapses to single column, portrait stacks above text
+- **Lessons info block:** `.lessons-info` — `background: #f2ede6`, `border-left: 3px solid #8b6635`, `padding: 1em 1.25em`. Rows use `display: flex; gap: 1em`. Labels use `.lessons-label`: Montserrat 0.75rem uppercase, gold, `flex: 0 0 6.5rem` — flex fixed-width required to prevent value text bleeding under label.
+- **Recording cards:** `.recording-card` — `background: #fdf9f4` (warm near-white, not pure white), `border: 1px solid rgba(139,102,53,0.2)`, flex column. Video iframe sits flush above card body. Meta line (composer + year) in Montserrat 0.8rem uppercase with gold bottom border. Title in Playfair italic. Ukrainian title and movement/performer details in Montserrat at 0.65rem and 0.6rem respectively.
+- **Recording filters:** Two side-by-side dropdowns (category + composer) in a flex row, `max-width: 720px` centered. All selects use `appearance: none` with an inline SVG chevron via `background-image` (`right 12px center`) to restore the dropdown indicator. Right padding `36px` to avoid text overlapping chevron.
+- **Recordings grid:** `repeat(2, 1fr)` two-column card grid, `max-width: 1200px`, collapses to 1-column at 700px.
+- **Footer:** minimal — name in Montserrat 500 uppercase, email + copyright in Montserrat 0.75rem uppercase gold. `border-top: 1px solid rgba(139,102,53,0.25)`. Present on all pages.
+- **Mobile breakpoint:** 700px — grid collapses to single column, portrait stacks above text, recordings grid goes 1-column
 
 ## Known design issues (not yet resolved)
-- **No footer** — pages end abruptly. A minimal footer with email and copyright would close the layout properly.
 - **Contact page sparse** — one sentence and an email button. Could use the second portrait photo (removed from homepage) and expanded contact context.
 - **Bio second paragraph** — enormous run-on list of composer commissions. Hard to scan. Longer term: dedicated page or collapsible.
 

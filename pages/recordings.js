@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $("#selectCategory").change(function() {
     showCategory(this.value);
 });
+
+$("#selectComposer").change(function() {
+    showComposer(this.value);
+});
