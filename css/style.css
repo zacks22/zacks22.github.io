@@ -282,11 +282,14 @@ h2::after {
 
 .recording-card-meta {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: #8b6635;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.6em;
+  border-bottom: 1px solid rgba(139, 102, 53, 0.2);
+  padding-bottom: 0.5em;
 }
 
 .recording-card-title {
