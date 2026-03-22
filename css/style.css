@@ -248,6 +248,13 @@ iframe {
 
 /* ─── Contact CTA ────────────────────────────────────────── */
 
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+
 .contact-link {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
