@@ -198,6 +198,21 @@ h2::after {
 
 /* ─── Recordings ─────────────────────────────────────────── */
 
+.recording-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 720px;
+  margin: 2em auto;
+  padding: 0 1.5rem;
+}
+
+.recording-filters .recording-category {
+  flex: 1;
+  width: auto;
+  margin: 0;
+}
+
 .recording-category {
   text-align: center;
   width: min(60%, 340px);
