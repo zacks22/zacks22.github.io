@@ -1,58 +1,60 @@
-// Function to replace hyphens with spaces and uppercase words
 function formatCategoryParam(param) {
     return param
-        .replace(/-/g, ' ') // Replace hyphens with spaces globally
-        .replace(/(?:^|\s)\S/g, function (a) {
+        .replace(/-/g, ' ')
+        .replace(/(?:^|\s)\S/g, function(a) {
             return a.toUpperCase();
-        }); // Uppercase the first character of each word
+        });
+}
+
+function categoryToSlug(category) {
+    return category.trim().toLowerCase().replace(/\s+/g, '-');
 }
 
 async function generateRecordings() {
-
-    // Get the URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const paramCategory = urlParams.get('category');
-    const formattedCategory = formatCategoryParam(paramCategory);
-
-    // Fetch project data from JSON file and filter for selected category
     const response = await fetch('../data/recordings.json');
     const allRecordings = await response.json();
-    const recordings = allRecordings.filter(record => record.category.trim() === formattedCategory);
 
-    // get recordings container and start generating html
-    var recordingsContainer = document.getElementById('recordings-container');
+    const container = document.getElementById('recordings-container');
 
-    recordingHtml = ``;
-
-    // Generate HTML for each recording
-    recordings.forEach(function(recording) {
-      recordingHtml += `
-      <div class="recording-section">
-          <hr class="recording-hr">
-          <h4>
-            ${recording.composer}: ${recording.title} ${recording.year === "" ? '' : `(${recording.year})`} <br>
-            ${recording.ukr_composer === "" ? '' : `${recording.ukr_composer}:`} ${recording.ukr_title} ${recording.year === "" ? '' : `(${recording.year})`}
-          </h4>
-          <p>
-            <!-- Movements -->
-            ${recording.movements.map(movement => `<br>${movement}`).join('')}
-
-            <br>
-            <!-- Performers -->
-            ${recording.performers.map(performer => `<br>${performer}`).join('')}
-          </p>
-          <!-- Youtube Video iframe -->
-          <div class="video-container">
-              <iframe src="${recording.embedVideoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <br>
-        </div>
-        <br>
-      </div>
-      `;
-
+    // Group recordings by category slug
+    const grouped = {};
+    allRecordings.forEach(function(recording) {
+        const slug = categoryToSlug(recording.category);
+        if (!grouped[slug]) grouped[slug] = [];
+        grouped[slug].push(recording);
     });
 
-    // Append the recording HTML to the container
-    recordingsContainer.innerHTML = recordingHtml;
+    let html = '';
+    Object.keys(grouped).forEach(function(slug) {
+        html += `<div class="category-section" data-category="${slug}" style="display:none">`;
+        grouped[slug].forEach(function(recording) {
+            html += `
+            <div class="recording-section">
+                <hr class="recording-hr">
+                <h4>
+                    ${recording.composer}: ${recording.title} ${recording.year === "" ? '' : `(${recording.year})`} <br>
+                    ${recording.ukr_composer === "" ? '' : `${recording.ukr_composer}:`} ${recording.ukr_title} ${recording.year === "" ? '' : `(${recording.year})`}
+                </h4>
+                <p>
+                    ${recording.movements.map(movement => `<br>${movement}`).join('')}
+                    <br>
+                    ${recording.performers.map(performer => `<br>${performer}`).join('')}
+                </p>
+                <div class="video-container">
+                    <iframe src="${recording.embedVideoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <br>
+            </div>`;
+        });
+        html += `</div>`;
+    });
+
+    container.innerHTML = html;
+    showCategory(document.getElementById('selectCategory').value);
+}
+
+function showCategory(slug) {
+    document.querySelectorAll('.category-section').forEach(function(el) {
+        el.style.display = el.dataset.category === slug ? '' : 'none';
+    });
 }
