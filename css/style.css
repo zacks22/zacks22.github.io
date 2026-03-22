@@ -177,7 +177,13 @@ h2::after {
   padding: 1em 1.25em;
   margin: 1.25em 0;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.8;
+}
+
+.lessons-info > div {
+  display: flex;
+  gap: 1em;
+  padding: 0.15em 0;
 }
 
 .lessons-label {
@@ -186,30 +192,11 @@ h2::after {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #8b6635;
-  display: inline-block;
-  width: 7em;
+  flex: 0 0 6.5rem;
+  padding-top: 0.1em;
 }
 
 /* ─── Recordings ─────────────────────────────────────────── */
-
-.recording-section {
-  padding: 0 1em;
-  text-align: center;
-}
-
-.recording-hr {
-  width: 80%;
-  border: 0;
-  height: 1px;
-  background: #8b6635;
-  background-image: linear-gradient(to right, transparent, #8b6635, transparent);
-}
-
-.about-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, transparent, #8b6635, transparent);
-}
 
 .recording-category {
   text-align: center;
@@ -255,20 +242,90 @@ h2::after {
   background-color: #f2ede6;
 }
 
-/* ─── Video ──────────────────────────────────────────────── */
+/* ─── Recordings header ──────────────────────────────────── */
 
-.video-container {
-  width: 90%;
+.recordings-header {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2em 1.5rem 0;
 }
 
-iframe {
+/* ─── Recording cards ────────────────────────────────────── */
+
+.recordings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
   width: 100%;
-  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
+.recording-card {
+  background: #ffffff;
+  border: 1px solid rgba(139, 102, 53, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.recording-card iframe {
+  width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
   display: block;
-  margin: 1.5em auto;
+  margin: 0;
+  max-width: none;
+  border: 0;
+}
+
+.recording-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+  flex: 1;
+}
+
+.recording-card-meta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8b6635;
+  margin: 0 0 0.6em;
+  border-bottom: 1px solid rgba(139, 102, 53, 0.2);
+  padding-bottom: 0.5em;
+}
+
+.recording-card-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2a2420;
+  margin: 0 0 0.3em;
+  line-height: 1.4;
+}
+
+.recording-card-ukr {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: #8b6635;
+  opacity: 0.85;
+  margin: 0 0 0.5em;
+  line-height: 1.5;
+}
+
+.recording-card-detail {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.03em;
+  color: #2a2420;
+  opacity: 0.6;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ─── Contact CTA ────────────────────────────────────────── */
@@ -358,5 +415,11 @@ footer {
 
   h1.about-title {
     font-size: 1.8rem;
+  }
+
+  .recordings-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
+    gap: 1rem;
   }
 }
