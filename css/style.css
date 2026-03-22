@@ -177,7 +177,13 @@ h2::after {
   padding: 1em 1.25em;
   margin: 1.25em 0;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.8;
+}
+
+.lessons-info > div {
+  display: flex;
+  gap: 1em;
+  padding: 0.15em 0;
 }
 
 .lessons-label {
@@ -186,8 +192,8 @@ h2::after {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #8b6635;
-  display: inline-block;
-  width: 7em;
+  flex: 0 0 6.5rem;
+  padding-top: 0.1em;
 }
 
 /* ─── Recordings ─────────────────────────────────────────── */
